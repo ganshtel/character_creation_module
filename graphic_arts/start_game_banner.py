@@ -44,4 +44,3 @@ def run_screensaver():
 if __name__ == "__main__":
     run_screensaver()
     sys.exit(0)
-
