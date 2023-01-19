@@ -6,8 +6,8 @@ from random import randint
 from graphic_arts.start_game_banner import run_screensaver
 
 DEFAULT_ATTACK = 5
-DEFAULT_DEFENCE = 10 
-DEFAULT_STAMINA = 80 
+DEFAULT_DEFENCE = 10
+DEFAULT_STAMINA = 80
 
 
 class Character:
@@ -35,7 +35,7 @@ class Character:
 
     # Новый метод базового класса.
     def __str__(self):
-        return f'{self.__class__.__name__} - {self.BRIEF_DESC_CHAR_CLASS}.' 
+        return f'{self.__class__.__name__} - {self.BRIEF_DESC_CHAR_CLASS}.'
 
 
 class Warrior(Character):
@@ -62,7 +62,7 @@ class Healer(Character):
     RANGE_VALUE_ATTACK = (-3, -1)
     RANGE_VALUE_DEFENCE = (2, 5)
     SPECIAL_BUFF = DEFAULT_DEFENCE + 30
-    SPECIAL_SKILL = 'Защита' 
+    SPECIAL_SKILL = 'Защита'
 
 
 def start_training(character):
@@ -84,7 +84,7 @@ def start_training(character):
     cmd = None
     while cmd != 'skip':
         cmd = input('Введи команду: ')
-        # Charracter's action 
+        # Charracter's action
         if cmd in commands:
             print(commands[cmd])
 
@@ -100,7 +100,7 @@ def choice_char_class(char_name: str) -> Character:
     # ввод пользователя и класс персонажа.
     game_classes = {'warrior': Warrior, 'mage': Mage, 'healer': Healer}
 
-    approve_choice: str  = None
+    approve_choice: str = None
 
     while approve_choice != 'y':
         selected_class = input('Введи название персонажа, '
